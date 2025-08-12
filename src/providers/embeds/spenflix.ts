@@ -80,7 +80,7 @@ export function makeSpenFlixEmbed(id: string, rank: number = 100) {
       if (type === 'movie') {
         url += `/${serverIndex}/m/${tmdbId}`;
       } else if (type === 'show') {
-        url += `/tv/${tmdbId}/season/${season}/episode/${episode}?sr=${serverIndex}`;
+        url += `/${serverIndex}/t/${tmdbId}/${season}/${episode}`; /1/t/119051/1/1
       } else {
         throw new NotFoundError('Unsupported media type');
       }
